@@ -10,5 +10,6 @@ makepkg -si ./archlinux-32-keyring/
 
 
 echo Making ISO...
-
-mkarchiso -v -o out/ -w work/ -P Xircon -L Arch32ISO -m iso baseline/
+mkdir -p out/
+mkdir -p work/
+mkarchiso -v -o out/ -w work/ -L Arch32ISO -m iso baseline/
