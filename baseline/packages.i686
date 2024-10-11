@@ -1,0 +1,10 @@
+base
+linux
+mkinitcpio
+mkinitcpio-archiso
+syslinux
+nano
+arch-install-scripts
+pcmciautils
+net-tools
+dhcpcd
