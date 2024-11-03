@@ -8,3 +8,5 @@ arch-install-scripts
 pcmciautils
 net-tools
 dhcpcd
+parted
+terminus-font
