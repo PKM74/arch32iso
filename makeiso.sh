@@ -13,3 +13,7 @@ echo Making ISO...
 mkdir -p out/
 mkdir -p work/
 sudo mkarchiso -v -o out/ -w work/ -L Arch32MINI -P Xircon -m iso baseline/
+
+echo Cleanup
+rm -rf work/
+rm -rf archlinux32-keyring/
