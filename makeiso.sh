@@ -8,8 +8,10 @@ git clone https://aur.archlinux.org/archlinux32-keyring.git
 cd archlinux32-keyring
 makepkg -si --skippgpcheck --noconfirm
 cd ..
+sudo pacman-key --import ./archlinux32-keyring/*.pgp
 sudo pacman-key --init
 sudo pacman-key --populate
+
 
 echo Making ISO...
 mkdir -p out/
