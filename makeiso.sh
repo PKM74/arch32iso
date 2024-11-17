@@ -1,6 +1,6 @@
 echo Installing Dependancies
 
-sudo pacman -Sy python3 python-pytest pkgconf git sequoia-sq archiso micro grub base-devel
+sudo pacman -Sy --noconfirm python3 python-pytest pkgconf git sequoia-sq archiso micro grub base-devel
 
 echo Adding Keys
 
