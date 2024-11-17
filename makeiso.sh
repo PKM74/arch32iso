@@ -7,7 +7,7 @@ echo Adding Keys
 git clone https://aur.archlinux.org/archlinux32-keyring.git
 cd archlinux32-keyring
 sudo useradd build -G wheel,storage
-sudo chown -R build ./*
+sudo chown -R build ./
 sudo su build -c 'makepkg -si --skippgpcheck --noconfirm'
 cd ..
 sudo mv ./archlinux32-keyring/src/archlinux32-keyring*/archlinux32.pgp ./archlinux32-keyring/src/archlinux32-keyring*/pubring.pgp
