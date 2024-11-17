@@ -1,16 +1,16 @@
 echo Installing Dependancies
 
-sudo pacman -Sy --noconfirm python3 python-pytest pkgconf git sequoia-sq archiso micro grub base-devel
+sudo pacman -Sy --noconfirm python3 python-pytest pkgconf git sequoia-sq archiso micro grub base-devel chpasswd
 
 echo Adding Keys
 
 git clone https://aur.archlinux.org/archlinux32-keyring.git
 cd archlinux32-keyring
 sudo useradd build -G wheel,storage
-sudo passwd build -s
-echo build
+echo build:build | chpasswd
+echo Build User Passwd is: build
 sudo chown -R build ./
-sudo -S su build -c 'makepkg -si --skippgpcheck --noconfirm'
+su build -c 'makepkg -si --skippgpcheck --noconfirm'
 echo build
 cd ..
 sudo mv ./archlinux32-keyring/src/archlinux32-keyring*/archlinux32.pgp ./archlinux32-keyring/src/archlinux32-keyring*/pubring.pgp
