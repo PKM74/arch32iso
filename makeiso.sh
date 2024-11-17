@@ -8,7 +8,8 @@ git clone https://aur.archlinux.org/archlinux32-keyring.git
 cd archlinux32-keyring
 makepkg -si --skippgpcheck --noconfirm
 cd ..
-sudo pacman-key --import ./archlinux32-keyring/src/archlinux32-keyring*/*.pgp
+sudo mv ./archlinux32-keyring/src/archlinux32-keyring*/archlinux32.pgp ./archlinux32-keyring/src/archlinux32-keyring*/pubring.pgp
+sudo pacman-key --import ./archlinux32-keyring/src/archlinux32-keyring*/pubring.pgp
 sudo pacman-key --init
 sudo pacman-key --populate
 
