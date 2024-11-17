@@ -6,7 +6,7 @@ echo Adding Keys
 
 git clone https://aur.archlinux.org/archlinux32-keyring.git
 cd archlinux32-keyring
-makepkg -si --skippgpcheck
+makepkg -si --skippgpcheck --noconfirm
 cd ..
 sudo pacman-key --init
 sudo pacman-key --populate
@@ -14,7 +14,7 @@ sudo pacman-key --populate
 echo Making ISO...
 mkdir -p out/
 mkdir -p work/
-sudo mkarchiso -v -o out/ -w work/ -L Arch32MINI -P Xircon -m iso baseline/
+sudo mkarchiso -v -o out/ -w work/ -L Arch32MINI -P Xircon -m iso mini/
 
 echo Cleanup
 sudo rm -rf work/
