@@ -13,8 +13,8 @@ sudo chown -R build ./
 echo build
 su build -c 'makepkg -s --skippgpcheck --noconfirm'
 cd ..
-sudo mv ./archlinux32-keyring/src/archlinux32-keyring*/archlinux32.pgp ./archlinux32-keyring/src/archlinux32-keyring*/pubring.pgp
-sudo pacman-key --import ./archlinux32-keyring/src/archlinux32-keyring*/pubring.pgp
+sudo mv ./archlinux32-keyring/src/archlinux32-keyring-v20240131/archlinux32.pgp ./archlinux32-keyring/src/archlinux32-keyring-v20240131/pubring.pgp
+sudo pacman-key --import ./archlinux32-keyring/src/archlinux32-keyring-v20240131/pubring.pgp
 sudo pacman-key --init
 sudo pacman-key --populate
 
