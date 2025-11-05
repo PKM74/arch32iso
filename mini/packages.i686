@@ -1,9 +1,9 @@
 base
-linux
+linux-lts
 mkinitcpio
 mkinitcpio-archiso
 syslinux
-nano
+vim
 arch-install-scripts
 pcmciautils
 net-tools
