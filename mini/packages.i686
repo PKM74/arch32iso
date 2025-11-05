@@ -1,5 +1,5 @@
 base
-linux-lts
+linux
 mkinitcpio
 mkinitcpio-archiso
 syslinux
