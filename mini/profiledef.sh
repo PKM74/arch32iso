@@ -8,12 +8,12 @@ iso_application="Arch Linux baseline"
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="arch"
 buildmodes=('iso')
-bootmodes=('bios.syslinux.mbr')
+bootmodes=('bios.syslinux')
 arch="i686"
 pacman_conf="pacman.conf"
 airootfs_image_type="squashfs"
-airootfs_image_tool_options=('-progress')
-bootstrap_tarball_compression=(zstd -c -T0 --long -19)
+airootfs_image_tool_options=('-progress' '-comp' 'xz')
+bootstrap_tarball_compression=(zstd -c -T0 --long --ultra -22)
 file_permissions=(
   ["/etc/shadow"]="0:0:400"
 )
